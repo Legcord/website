@@ -27,8 +27,8 @@ html {
 .button--green {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid #64c8b1;
+  color: #64c8b1;
   text-decoration: none;
   padding: 10px 30px;
 }
@@ -41,8 +41,8 @@ html {
 .button--grey {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid #555c62;
+  color: #555c62;
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;

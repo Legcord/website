@@ -2,23 +2,21 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
-        nuxtjs
-      </h1>
+
       <h2 class="subtitle">
-        My astonishing Nuxt.js project
+        A custom Discord client.
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://github.com/smartfrigde/armcord/releases"
           target="_blank"
           rel="noopener"
           class="button--green"
         >
-          Documentation
+          Download
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/smartfrigde/armcorrd"
           target="_blank"
           rel="noopener"
           class="button--grey"
@@ -31,16 +29,22 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from "~/components/Logo.vue";
 
 export default {
   components: {
-    Logo
-  }
-}
+    Logo,
+  },
+};
 </script>
 
 <style>
+:root {
+  background-color: #2c2f33;
+  --header-secondary: #b9bbbe;
+  --header-primary: #fff;
+  --background-tertiary: #202225;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -51,19 +55,19 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #99aab5;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  color: #99aab5;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
