@@ -16,7 +16,7 @@
           Download
         </a>
         <a
-          href="https://github.com/smartfrigde/armcorrd"
+          href="https://github.com/smartfrigde/armcord"
           target="_blank"
           rel="noopener"
           class="button--grey"
