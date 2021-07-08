@@ -30,7 +30,24 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      "nuxt-social-meta",
+      {
+        url: "https://armcord.vercel.app/",
+        title: "ArmCord - A Discord Client",
+        site_name: "ArmCord",
+        description:
+          "ArmCord is a custom Discord client made for people who want a Discord client for Arm64 systems, or for those who just want a lighter alternative or simply want a standalone Discord client.",
+        img_size: { width: "640", height: "320" },
+        img: "https://armcord.vercel.app/banner.png",
+        locale: "en_US",
+        twitter: "@kckarnige",
+        twitter_card: "summary_large_image",
+        theme_color: "#7289da",
+      },
+    ],
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

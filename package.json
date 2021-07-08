@@ -1,8 +1,8 @@
 {
-  "name": "nuxtjs",
+  "name": "armcord-website",
   "version": "1.0.0",
-  "description": "My astonishing Nuxt.js project",
-  "author": "msweeneydev",
+  "description": "A custom Discord client for Linux ARM devices!",
+  "author": "smartfridge",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.15.0",
-    "nuxt": "^2.15.7"
-  },
-  "devDependencies": {}
+    "nuxt": "^2.15.7",
+    "nuxt-social-meta": "^1.0.0"
+  }
 }
