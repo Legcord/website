@@ -3,8 +3,13 @@
 </template>
 // Might be better to replace with SVG in future
 <style>
-
-@import url("https://kckarnige.github.io/femboi_owo/discord-font.css");
+@font-face {
+    font-family: 'Discordinated';
+    src: url('https://armcord.vercel.app/DISCORDINATED.woff2') format('woff2'),
+        url('https://armcord.vercel.app/DISCORDINATED.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   h1 {
       font-size: 0px;
       text-align: center;
