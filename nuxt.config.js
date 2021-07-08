@@ -39,7 +39,7 @@ export default {
         site_name: "ArmCord",
         description:
           "ArmCord is a custom Discord client made for people who want a Discord client for Arm64 systems, or for those who just want a lighter alternative or simply want a standalone Discord client.",
-        img_size: { width: "640", height: "320" },
+        img_size: { width: "1280", height: "720" },
         img: "https://armcord.vercel.app/banner.png",
         locale: "en_US",
         twitter: "@kckarnige",
