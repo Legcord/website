@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Button from "@components/Button.astro";
+
+import "@root/index.scss";
+---
+
+<BaseLayout>
+  <div id="download">
+    <h1>Downloads</h1>
+    <div>
+      <Button name="DEB" href="/download/linux/deb" />
+      <Button name="RPM" href="/download/linux/rpm" />
+      <Button name="AppImage" href="/download/linux/appimage" />
+      <Button name="TAR" href="/download/linux/tar" />
+    </div>
+  </div>
+</BaseLayout>

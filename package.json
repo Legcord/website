@@ -1,0 +1,16 @@
+{
+  "name": "armcord-site",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^1.0.0-beta.50"
+  },
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}

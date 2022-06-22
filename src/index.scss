@@ -1,0 +1,58 @@
+// BaseLayout CSS
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  background-color: #36393f;
+}
+
+nav {
+  display: flex;
+  background-color: #2f3136;
+  align-items: center;
+  
+  img {
+    width: 120px;
+    padding: 0rem 1rem 0.25rem 0.5rem;
+  }
+}
+
+// FAQLayout CSS
+#faq {
+  text-align: center;
+  color: #95a7b3;
+  font-family: sans-serif;
+
+  a {
+    color: #7289da;
+    &:visited {
+      color: #7289da;
+    }
+  }
+}
+
+// index.astro CSS
+#index {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  img {
+    width: 400px;
+    padding-bottom: 1rem;
+  }
+}
+
+// download/index.astro CSS
+#download {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: #95a7b3;
+}

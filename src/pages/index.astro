@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+
+import "@root/index.scss";
+---
+
+<BaseLayout>
+	<div id="index">
+    <img src="logo.png" alt="ArmCord logo" />
+    <div>
+      <Button name="Download" href="/download" />
+      <Button name="FAQ" href="/faq" />
+    </div>
+  </div>
+</BaseLayout>
