@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Discordinated';
+    src: url('https://armcord.smartfridge.space/DISCORDINATED.woff2') format('woff2'),
+        url('https://armcord.smartfridge.space/DISCORDINATED.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
