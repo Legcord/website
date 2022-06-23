@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
 
 import "@root/index.scss";
 ---
@@ -11,6 +12,17 @@ import "@root/index.scss";
     <div>
       <Button name="Download" href="/download" />
       <Button name="FAQ" href="/faq" />
+    </div>
+    <div id="cards">
+      <Card title="Various mods built in">
+        Explore Cumcord/GooseMod/Flicker plugins and their features!
+      </Card>
+      <Card title="Made for Privacy">
+        ArmCord automatically blocks Discord's trackers.
+      </Card>
+      <Card title="Designed to work anywhere">
+        We support every platform Electron supports.
+      </Card>
     </div>
   </div>
 </BaseLayout>

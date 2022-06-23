@@ -14,7 +14,7 @@ nav {
   
   img {
     width: 120px;
-    padding: 0rem 1rem 0.25rem 0.5rem;
+    padding: 0rem 1rem 0rem 0.5rem;
   }
 }
 
@@ -43,6 +43,11 @@ nav {
   img {
     width: 400px;
     padding-bottom: 1rem;
+  }
+
+  #cards {
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 
