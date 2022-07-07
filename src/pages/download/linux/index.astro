@@ -6,13 +6,20 @@ import "@root/index.scss";
 ---
 
 <BaseLayout>
+  <div id="index">
+  <img src="/logo.svg" alt="ArmCord Logo :O" />
+  <div id="options">
+    <Button name="Home" href="/" />
+    <Button name="Download" href="/download" />
+    <Button name="FAQ" href="/faq" />
+  </div><br>
   <div id="download">
-    <h1>Downloads</h1>
     <div>
       <Button name="DEB" href="/download/linux/deb" />
       <Button name="RPM" href="/download/linux/rpm" />
       <Button name="AppImage" href="/download/linux/appimage" />
       <Button name="TAR" href="/download/linux/tar" />
     </div>
+  </div>
   </div>
 </BaseLayout>

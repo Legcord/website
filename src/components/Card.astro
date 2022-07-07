@@ -5,27 +5,24 @@ const { title } = Astro.props;
 <style lang="scss">
   div {
     margin: 1rem;
-    color: #95a7b3;
+    color: #fff;
     transition: color 0.4s;
     transition: box-shadow 0.4s;
-    width: 400px;
+    width: 380px;
     background-color: #2f3136;
     font-family: sans-serif;
     vertical-align: middle;
     text-align: center;
     border-radius: 5px;
     padding-bottom: 1rem;
-
-    &:hover {
-      color: #dddddd;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
+    border-bottom: 4px solid #7289da;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   }
 
   content {
     display: block;
     padding: 0 1rem;
-    font-size: large;
+    font-size: medium;
   }
 </style>
 

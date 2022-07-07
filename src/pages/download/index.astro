@@ -6,12 +6,19 @@ import "@root/index.scss";
 ---
 
 <BaseLayout>
+  <div id="index">
+  <img src="/logo.svg" alt="ArmCord Logo :O" />
+  <div id="download-options">
+    <Button name="Home" href="/" />
+    <Button name="Download" href="/download" />
+    <Button name="FAQ" href="/faq" />
+  </div><br>
   <div id="download">
-    <h1>Downloads</h1>
     <div>
       <Button name="Windows" href="https://github.com/ArmCord/ArmCord/releases/download/v3.0.7/ArmCord.Setup.3.0.7.exe" />
       <Button name="Linux" href="/download/linux" />
       <Button name="macOS" href="https://github.com/ArmCord/ArmCord/releases/download/v3.0.7/ArmCord-3.0.7.dmg" />
     </div>
+  </div>
   </div>
 </BaseLayout>
