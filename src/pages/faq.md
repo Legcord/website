@@ -4,7 +4,7 @@ title: FAQ
 ---
 
 ## What is ArmCord?
-ArmCord is a custom Discord client designed to run smoother and enhance your Discord experience. 
+ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight. 
 
 ## Will I get banned for using this?   
 You are breaking [Discord ToS](https://discord.com/terms#software-in-discord%E2%80%99s-services) by using ArmCord, but no one has been banned from using it or any of the client mods included.
