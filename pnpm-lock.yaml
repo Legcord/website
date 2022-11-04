@@ -344,7 +344,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.13
     dev: true
 
-  /@jridgewell/resolve-uri/3.0.7:
+  /@jridgewell/resolve-uri/3.0.8:
     resolution: {integrity: sha512-8cXDaBBHOr2pQ7j77Y6Vp5VDT2sIqWyWQ56TjEq4ih/a4iST3dItRe8Q9fp0rrIl9DoKhWQtUQz/YpOxLkXbNA==}
     engines: {node: '>=6.0.0'}
     dev: true
@@ -361,7 +361,7 @@ packages:
   /@jridgewell/trace-mapping/0.3.13:
     resolution: {integrity: sha512-o1xbKhp9qnIAoHJSWd6KlCZfqslL4valSF81H8ImioOAxluWYWOpWkpyktY2vnt4tbrX9XYaxovq6cgowaJp2w==}
     dependencies:
-      '@jridgewell/resolve-uri': 3.0.7
+      '@jridgewell/resolve-uri': 3.0.8
       '@jridgewell/sourcemap-codec': 1.4.13
     dev: true
 
@@ -1275,7 +1275,7 @@ packages:
       merge-stream: 2.0.0
       npm-run-path: 5.1.0
       onetime: 6.0.0
-      signal-exit: 3.0.7
+      signal-exit: 3.0.8
       strip-final-newline: 3.0.0
     dev: true
 
@@ -2885,7 +2885,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       onetime: 5.1.2
-      signal-exit: 3.0.7
+      signal-exit: 3.0.8
     dev: true
 
   /retext-latin/3.1.0:
@@ -3015,7 +3015,7 @@ packages:
       object-inspect: 1.12.1
     dev: true
 
-  /signal-exit/3.0.7:
+  /signal-exit/3.0.8:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
