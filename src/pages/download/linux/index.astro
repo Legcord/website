@@ -2,10 +2,10 @@
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
+import "@root/index.scss";
 const response = await fetch('https://www.armcord.xyz/latest.json');
 const data = await response.json();
 const latestVersion = data.version;
-import "@root/index.scss";
 ---
 
 <BaseLayout>
