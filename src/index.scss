@@ -7,7 +7,7 @@ body {
   background-color: #36393f;
 }
 
-// FAQLayout CSS
+// faq/index.astro CSS
 #faq {
   text-align: center;
   color: #fff;
@@ -43,6 +43,7 @@ body {
 
   #cards {
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
     a {
       color: #7289da;
@@ -65,22 +66,26 @@ body {
   align-items: center;
   font-family: sans-serif;
   color: #fff;
-  padding-top: 1rem;
-  border-top: 2px solid #7289da;
+  padding-top: 2rem;
 }
 
 // option stuff
 
-#home-options [href="/"], #download-options [href="/download"], #faq-options [href="/faq"] {
+#home-options [href="/"],
+#download-options [href="/download"],
+#faq-options [href="/faq"] {
   background: #43b581;
   pointer-events: none;
 }
 
-footer {
-  text-align: center;
+#footer {
+  text-align: right;
   font-family: sans-serif;
-  color: #7289da;
-  background-color: #2f3136;
-  padding: 8px;
-  display: fixed;
+  color: #23272a;
+  margin: 8px;
+  display: inline;
+}
+::selection {
+  background-color: #7289daa8;
+  color: #ffffffa8;
 }

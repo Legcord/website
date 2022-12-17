@@ -1,7 +1,10 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
+import IconButton from "@components/IconButton.astro";
 import Button from "@components/Button.astro";
-
+const response = await fetch('https://www.armcord.xyz/latest.json');
+const data = await response.json();
+const latestVersion = data.version;
 import "@root/index.scss";
 ---
 
@@ -15,9 +18,10 @@ import "@root/index.scss";
   </div><br>
   <div id="download">
     <div>
-      <Button name="Windows" href="https://github.com/ArmCord/ArmCord/releases/download/v3.0.8/ArmCord.Setup.3.0.8.exe" />
-      <Button name="Linux" href="/download/linux" />
-      <Button name="macOS" href="https://github.com/ArmCord/ArmCord/releases/download/v3.0.8/ArmCord-3.0.8.dmg" />
+      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord.Setup.${latestVersion}.exe`} />
+      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows on ARM" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord.Setup.${latestVersion}.ARM64.exe`} />
+      <IconButton vectorIcon="/platform-icons/linux.svg" name="Linux" href="/download/linux" />
+      <IconButton vectorIcon="/platform-icons/mac.svg" name="MacOS" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord-${latestVersion}.dmg`} />
     </div>
   </div>
   </div>

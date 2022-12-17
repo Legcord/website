@@ -1,5 +1,5 @@
 ---
-const { title } = Astro.props;
+const { title, width } = Astro.props;
 ---
 
 <style lang="scss">
@@ -8,7 +8,6 @@ const { title } = Astro.props;
     color: #fff;
     transition: color 0.4s;
     transition: box-shadow 0.4s;
-    width: 380px;
     background-color: #2f3136;
     font-family: sans-serif;
     vertical-align: middle;
@@ -26,7 +25,7 @@ const { title } = Astro.props;
   }
 </style>
 
-<div>
+<div style={`width: ${width};`}>
   <h2> {title} </h2>
   <content>
     <slot />
