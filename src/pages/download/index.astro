@@ -3,12 +3,10 @@ import BaseLayout from "@layouts/BaseLayout.astro"
 import IconButton from "@components/IconButton.astro";
 import Button from "@components/Button.astro";
 import "@root/index.scss";
-const response = await fetch("https://www.armcord.xyz/latest.json");
-const data = await response.json();
-const latestVersion = data.version;
 ---
 
 <BaseLayout>
+  <script is:inline src="/getLatest.js"></script>
   <div id="index">
   <img src="/logo.svg" alt="ArmCord Logo :O" />
   <div id="download-options">
@@ -18,10 +16,10 @@ const latestVersion = data.version;
   </div><br>
   <div id="download">
     <div>
-      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord.Setup.${latestVersion}.exe`} />
-      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows on ARM" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord.Setup.${latestVersion}.ARM64.exe`} />
+      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.exe`} />
+      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows on ARM" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.ARM64.exe`} />
       <IconButton vectorIcon="/platform-icons/linux.svg" name="Linux" href="/download/linux" />
-      <IconButton vectorIcon="/platform-icons/mac.svg" name="MacOS" href={`https://github.com/ArmCord/ArmCord/releases/download/v${latestVersion}/ArmCord-${latestVersion}.dmg`} />
+      <IconButton vectorIcon="/platform-icons/mac.svg" name="MacOS" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.dmg`} />
     </div>
   </div>
   </div>
