@@ -1,0 +1,15 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Button from "@components/Button.astro";
+import "@root/index.scss";
+---
+
+<BaseLayout>
+  <div id="download">
+    <h1>From where do you want to download ArmCord?</h1>
+    <div>
+      <Button name="Microsoft Store" href="https://apps.microsoft.com/store/detail/armcord/9PFHLJFD7KJT" />
+      <Button name="Github" href="/download/windows/exe" />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,29 +1,17 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import IconButton from "@components/IconButton.astro";
-import Button from "@components/Button.astro";
 import "@root/index.scss";
 ---
 
 <BaseLayout>
   <script is:inline src="/getLatest.js"></script>
-  <div id="index">
-  <img src="/logo.svg" alt="ArmCord Logo :O" />
-  <div id="download-options">
-    <Button name="Home" href="/" />
-    <Button name="Download" href="/download" />
-    <Button name="FAQ" href="/faq" />
-  </div><br>
   <div id="download">
+    <h1>Downloads</h1>
     <div>
-      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.exe`} />
-      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows on ARM" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.ARM64.exe`} />
+      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`/download/windows`} />
       <IconButton vectorIcon="/platform-icons/linux.svg" name="Linux" href="/download/linux" />
       <IconButton vectorIcon="/platform-icons/mac.svg" name="MacOS" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.dmg`} />
-    </div><br>
-    <div align="center">
-      <Button name="Alternative Builds" href={`https://build.armcord.xyz/`} />
     </div>
-  </div>
   </div>
 </BaseLayout>

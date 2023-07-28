@@ -1,4 +1,6 @@
 ---
+import Button from "@components/Button.astro"; 
+
 import "@root/index.scss";
 ---
 
@@ -6,11 +8,19 @@ import "@root/index.scss";
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.">
-
     <title>ArmCord</title>
   </head>
   <body>
+    <nav>
+      <a href="/">
+        <img src="/logo.png" alt="ArmCord logo" />
+      </a>
+      <Button name="Download" href="/download" />
+      <Button name="FAQ" href="/faq" />
+      <Button name="Screenshots" href="/screenshots" />
+      <Button name="Github" href="https://github.com/ArmCord/ArmCord" />
+      <Button name="Donate" href="https://github.com/sponsors/smartfrigde" />
+    </nav>
     <slot />
-<div id="footer">ArmCord Team &copy;</div>
   </body>
 </html>

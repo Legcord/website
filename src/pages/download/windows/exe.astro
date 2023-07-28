@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Button from "@components/Button.astro";
+import "@root/index.scss";
+---
+
+<BaseLayout>
+  <script is:inline src="/getLatest.js"></script>
+  <div id="download">
+    <h1>Select your architecture:</h1>
+    <div>
+      <Button name="x86-64" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.exe`} />
+      <Button name="ARM64" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.ARM64.exe`} />
+    </div>
+  </div>
+</BaseLayout>

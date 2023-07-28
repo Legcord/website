@@ -1,34 +1,52 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
-
+import CardWithImage from "@components/CardWithImage.astro";
 import "@root/index.scss";
 ---
 
 <BaseLayout>
 	<div id="index">
-    <img src="/logo.svg" alt="ArmCord Logo :O" />
-    <div id="home-options">
-      <Button name="Home" href="/" />
-      <Button name="Download" href="/download" />
-      <Button name="FAQ" href="/faq" />
-    </div><br>
+    <h1>Features</h1>
     <div id="cards">
-      <Card width="380px" title="Various mods built in!">
-        Enjoy Vencord and Shelter, and their many features. Or if you want a more vanilla experience, you can do that too, it's up to you!
+      <CardWithImage title="Customizable" img="transparency.jpg" alt="ArmCord with transparency mode turned on">
+        Do you want your client to be transparent? Or you want your Discord to be more dark? ArmCord support theming natively!
+      </CardCardWithImage>
+      <CardWithImage title="Various mods built in" img="win10.jpg" alt="ArmCord with Vencord settings">
+        Enjoy Vencord, Shelter and their many features, or have a more vanilla experience, it's your choice! Import plugins and enhance your experience.
+      </CardCardWithImage>
+      <CardWithImage title="Designed to work everywhere" img="vista.png" alt="ArmCord running on Windows Vista">
+       ArmCord supports and <b>actually</b> works all major operating systems. Some members of our community got ArmCord to work on Windows Vista/XP!
+      </CardCardWithImage>  
+    </div>
+    <h1>ArmCord for...</h1>
+    <div id="cards">
+      <Card title="Casual user">
+        ArmCord is built specifically for ease of use. You no longer have to deal with the hassle of installing mods. Just download, run and pick what suits you the best!
       </Card>
-      <Card width="380px" title="Made for Privacy&trade;">
-        ArmCord automatically blocks all of Discord's trackers, so even without any client mods, you can feel safe and secure!
+      <Card title="Gamers">
+        Are you tired of Discord app taking your precious ram in the background? Try out ArmCord, it's much lighter and detects your games like a charm!
       </Card>
-      <Card width="380px" title="Completely Open Source">
-        Yup! ArmCord's source code is available on <a href="https://github.com/ArmCord/ArmCord">GitHub</a> under the <a href="https://choosealicense.com/licenses/osl-3.0/">OSL-3.0 license</a>.
+      <Card title="Developers">
+        ArmCord is completely open source, you can create themes and plugins for it. It's very hackable and doesn't block you to look what's inside.
       </Card>
-      <Card width="380px" title="Cross-Platform Support!">
-        ArmCord was originally created for ARM64 Linux devices, since Discord doesn't support them. We soon decided to support every platform that <a href="https://github.com/electron/electron#platform-support">Electron supports</a>!
+      <Card title="Linux users">
+        Are you tired of the official app being sluggish, unresponsive and not working properly? Try out ArmCord! It's built with Linux in mind and works flawlessly.
       </Card>
-      <Card width="380px" title="Plusieurs Langues">
-        We're not sure what that means, but ArmCord might! Thanks to <a href="https://weblate.org">Weblate</a>, ArmCord is more accessible to people of all languages! See something that doesn't make sense? You can <a href="https://weblate.org">help out</a>!
+    </div>
+    <h1>Extras</h1>
+    <div id="cards">
+      <Card title="Made for Privacy™">
+        ArmCord automatically blocks all of Discord's trackers; even without any client mods, you can feel safe and secure! We also don't collect any data from you.
+      </Card>
+      <Card title="Much more stable">
+        ArmCord is using a newer build of Electron than the stock Discord app. This means you can have a much more stable and secure experience, along with slightly better performance.
+      </Card>
+      <Card title="Mobile support">
+        ArmCord has experimental mobile/touch support for phones running Linux such as the PinePhone. While this is still far from an ideal solution, we're slowly trying to improve it.
+      </Card>
+      <Card title="Standalone client">
+        ArmCord is built as a standalone client and doesn't rely on the original Discord client in any way. No Discord code here and no injectors! 
       </Card>
     </div>
   </div>

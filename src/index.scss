@@ -3,27 +3,31 @@ body {
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+  font-family: sans-serif;
   margin: 0;
   background-color: #36393f;
 }
 
-// faq/index.astro CSS
+nav {
+  display: flex;
+  background-color: #2f3136;
+  align-items: center;
+  
+  img {
+    width: 120px;
+    padding: 0rem 1rem 0rem 0.5rem;
+  }
+}
+
+// FAQLayout CSS
 #faq {
   text-align: center;
-  color: #fff;
-  font-family: sans-serif;
+  color: #95a7b3;
 
   a {
     color: #7289da;
-    transition: .17s ease;
-    text-decoration: none;
-    font-weight: 450;
     &:visited {
       color: #7289da;
-    }
-    &:hover {
-      color: #5c6fb1;
-      transition: .17s ease;
     }
   }
 }
@@ -33,59 +37,33 @@ body {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  color: #95a7b3;
   flex-direction: column;
   
-  img {
-    width: 400px;
-    padding-bottom: 1rem;
-  }
-
   #cards {
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
-    a {
-      color: #7289da;
-      transition: .17s ease;
-      text-decoration: none;
-      font-weight: 450;
-      &:visited {
-        color: #7289da;
-      }
-      &:hover {
-        color: #5c6fb1;
-        transition: .17s ease;
-      }
-    }
   }
 }
-
+// screenshots.astro
+#screenshots {
+  flex: 1;
+  align-items: center;
+  color: #95a7b3;
+  flex-direction: column;
+  
+  #cards {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
 // download/index.astro CSS
 #download {
+  display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: sans-serif;
-  color: #fff;
-  padding-top: 2rem;
-}
-
-// option stuff
-
-#home-options [href="/"],
-#download-options [href="/download"],
-#faq-options [href="/faq"] {
-  background: #43b581;
-  pointer-events: none;
-}
-
-#footer {
-  text-align: right;
-  font-family: sans-serif;
-  color: #23272a;
-  margin: 8px;
-  display: inline;
-}
-::selection {
-  background-color: #7289daa8;
-  color: #ffffffa8;
+  color: #95a7b3;
 }
