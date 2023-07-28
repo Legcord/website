@@ -26,3 +26,6 @@ The source code is on [GitHub](https://github.com/ArmCord/ArmCord/).
 
 ## Where can I translate this?
 Translations are done using our [Weblate page](https://hosted.weblate.org/projects/armcord/armcord/).
+
+## Does ArmCord have a privacy policy?
+You can find it [here](https://armcord.xyz/privacy.txt).
