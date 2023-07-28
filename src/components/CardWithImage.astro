@@ -17,13 +17,16 @@ const { alt } = Astro.props;
     text-align: center;
     border-radius: 5px;
     padding-bottom: 1rem;
-
     &:hover {
       color: #dddddd;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
   }
-
+  @media only screen and (hover: none) and (pointer: coarse){
+      div, img {
+        width: 400px !important;
+      }
+    }
   content {
     display: block;
     padding: 0 1rem;

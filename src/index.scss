@@ -7,12 +7,19 @@ body {
   margin: 0;
   background-color: #36393f;
 }
-
+@media only screen and (hover: none) and (pointer: coarse){
+  nav {
+    display: contents !important;
+  }
+  body {
+    font-size: 15px!important;
+  }
+}
 nav {
   display: flex;
   background-color: #2f3136;
   align-items: center;
-  
+ 
   img {
     width: 120px;
     padding: 0rem 1rem 0rem 0.5rem;
