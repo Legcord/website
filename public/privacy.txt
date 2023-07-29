@@ -30,7 +30,7 @@ ArmCord may contain links to third-party services or websites that are not opera
 
     7. Children's Privacy
 
-ArmCord is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe that we have inadvertently collected personal information from a child under 13, please contact us immediately at support@armcord.xyz, and we will take appropriate steps to remove the information.
+ArmCord is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe that we have inadvertently collected personal information from a child under 13, please contact us immediately at support@armcord.app, and we will take appropriate steps to remove the information.
 
     8. Changes to the Privacy Policy
 
@@ -38,6 +38,6 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
     9. Contact Us
 
-If you have any questions, concerns, or suggestions regarding this Privacy Policy or your personal information, please contact us at support@armcord.xyz
+If you have any questions, concerns, or suggestions regarding this Privacy Policy or your personal information, please contact us at support@armcord.app
 
 By using ArmCord, you agree to the terms and conditions outlined in this Privacy Policy.
