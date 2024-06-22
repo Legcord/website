@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Button from "@components/Button.astro";
+import Card from "@components/LinuxCard.astro";
+import "@root/index.scss";
+---
+
+<BaseLayout>
+  <script is:inline src="/getLatest.js"></script>
+  <div id="download">
+    <div id="download">
+      <h1>Repositories</h1>
+      <div>
+        <Button name="Homebrew" href={`https://github.com/ArmCord/homebrew-armcord/`} />
+      </div>
+      <Card>
+        <h2 style="display: inline-block; transform: translateY(2px); font-weight: normal; font-style: italic;">ARM64 (M1+)</h2>
+        <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64.dmg`} />
+        <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64-mac.zip`} />
+      </Card>
+      <Card>
+        <h2 style="display: inline-block; transform: translateY(2px); font-weight: normal; font-style: italic;">Intel x86</h2>
+        <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.dmg`} />
+        <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-mac.zip`} />
+      </Card>
+
+      <a href="https://github.com/ArmCord/ArmCord/issues/560#issuecomment-2073419170">If macOS tells you the app is damaged, try this.</a>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  a {
+    color: white
+  }
+</style>
