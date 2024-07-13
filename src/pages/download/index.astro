@@ -1,17 +1,40 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import IconButton from "@components/IconButton.astro";
-import "@root/index.scss";
 ---
 
 <BaseLayout>
   <script is:inline src="/getLatest.js"></script>
-  <div id="download">
-    <h1>Downloads</h1>
-    <div>
-      <IconButton vectorIcon="/platform-icons/windows.svg" name="Windows" href={`/download/windows`} />
-      <IconButton vectorIcon="/platform-icons/linux.svg" name="Linux" href="/download/linux" />
-      <IconButton vectorIcon="/platform-icons/mac.svg" name="macOS" href={`/download/mac`} />
+  <div class="bg-gray-900 py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold text-center text-white mb-12">Download ArmCord</h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <IconButton 
+          vectorIcon="/platform-icons/windows.svg" 
+          name="Windows" 
+          href={`/download/windows`}
+          description="For Windows 7 and above"
+        />
+        <IconButton 
+          vectorIcon="/platform-icons/linux.svg" 
+          name="Linux" 
+          href="/download/linux"
+          description="For various Linux distributions"
+        />
+        <IconButton 
+          vectorIcon="/platform-icons/mac.svg" 
+          name="macOS" 
+          href={`/download/mac`}
+          description="For macOS 10.13 and above"
+        />
+      </div>
+      <div class="mt-16 text-center">
+        <h2 class="text-2xl font-semibold text-white mb-4">Not sure which version to choose?</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          ArmCord is available for Windows, Linux, and macOS. Choose the download that matches your operating system. 
+          If you're unsure, most modern computers use 64-bit (x64) versions.
+        </p>
+      </div>
     </div>
   </div>
 </BaseLayout>

@@ -1,31 +1,9 @@
 ---
-const { href, vectorIcon, name } = Astro.props;
+const { vectorIcon, name, href, description } = Astro.props;
 ---
 
-<style lang="scss">
-  a {
-    padding: 0.5rem 1rem;
-    font-family: sans-serif;
-    text-decoration: none;
-    background-color: #7289da;
-    color: #fff;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    margin: 1rem;
-    transition: .17s ease;
-    cursor: pointer;
-    &:hover {
-      background-color: #5c6fb1;
-      transition: .17s ease;
-    }
-    & .buttonIcon{
-      width: 1.1rem;
-      height: 1.1rem;
-      transform: translateY(2px);
-      background-size: cover;
-      filter: invert(1);
-    }
-  }
-</style>
-
-<a href={href}><div class='buttonIcon' style={`display: inline-block; background-image: url(${vectorIcon});`} /> {name}</a>
+<a href={href} class="bg-gray-800 rounded-lg p-6 text-center hover:bg-gray-700 transition duration-300 flex flex-col items-center">
+  <img src={vectorIcon} alt={name} class="w-16 h-16 mb-4 invert" />
+  <h2 class="text-2xl font-semibold text-white mb-2">{name}</h2>
+  <p class="text-gray-300 text-sm">{description}</p>
+</a>

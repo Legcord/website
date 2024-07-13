@@ -1,16 +1,26 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
-import "@root/index.scss";
 ---
 
 <BaseLayout>
   <script is:inline src="/getLatest.js"></script>
-  <div id="download">
-    <h1>Select your architecture:</h1>
-    <div>
-      <Button name="x86-64" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.exe`} />
-      <Button name="ARM64" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.ARM64.exe`} />
+  <div class="bg-gray-900 py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl font-bold text-center text-white mb-8">Download ArmCord for Windows 10/11</h1>
+      <h2 class="text-2xl font-semibold text-white mb-6 text-center">Select your system architecture:</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Button name="64-bit (x64)" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.exe`} description="For most modern computers" />
+        <Button name="ARM64" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord.Setup.VERSIONNUM.ARM64.exe`} description="For ARM-based devices" />
+      </div>
+      <div class="mt-8 text-center">
+        <p class="text-gray-300">
+          Not sure which architecture your system uses? 
+          <a href="https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">
+            Learn more about system architectures
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </BaseLayout>

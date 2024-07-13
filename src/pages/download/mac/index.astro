@@ -1,35 +1,41 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
-import Card from "@components/LinuxCard.astro";
-import "@root/index.scss";
 ---
 
 <BaseLayout>
   <script is:inline src="/getLatest.js"></script>
-  <div id="download">
-    <div id="download">
-      <h1>Repositories</h1>
-      <div>
-        <Button name="Homebrew" href={`https://github.com/ArmCord/homebrew-armcord/`} />
+  <div class="bg-gray-900 py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl font-bold text-center text-white mb-12">Download ArmCord for macOS</h1>
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-2xl font-semibold text-white mb-6 text-center">Choose your macOS version:</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4 text-center">ARM64 (M1+)</h3>
+            <div class="space-y-4">
+              <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64.dmg`} description="Disk image for easy installation" />
+              <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64-mac.zip`} description="Compressed archive" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4 text-center">Intel x86</h3>
+            <div class="space-y-4">
+              <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.dmg`} description="Disk image for easy installation" />
+              <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-mac.zip`} description="Compressed archive" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-xl font-semibold text-white mb-4 text-center">Package Manager</h3>
+          <Button name="Homebrew" href={`https://github.com/ArmCord/homebrew-armcord/`} description="Install using Homebrew package manager" />
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-gray-300">
+            <a href="https://github.com/ArmCord/ArmCord/issues/560#issuecomment-2073419170" class="text-blue-400 hover:underline">If macOS tells you the app is damaged, try this.</a>
+          </p>
+        </div>
       </div>
-      <Card>
-        <h2 style="display: inline-block; transform: translateY(2px); font-weight: normal; font-style: italic;">ARM64 (M1+)</h2>
-        <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64.dmg`} />
-        <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-arm64-mac.zip`} />
-      </Card>
-      <Card>
-        <h2 style="display: inline-block; transform: translateY(2px); font-weight: normal; font-style: italic;">Intel x86</h2>
-        <Button name="DMG" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.dmg`} />
-        <Button name="ZIP" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM-mac.zip`} />
-      </Card>
-
-      <a href="https://github.com/ArmCord/ArmCord/issues/560#issuecomment-2073419170">If macOS tells you the app is damaged, try this.</a>
     </div>
   </div>
 </BaseLayout>
-<style>
-  a {
-    color: white
-  }
-</style>
