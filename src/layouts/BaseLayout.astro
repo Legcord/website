@@ -1,30 +1,27 @@
 ---
-import Button from "@components/Button.astro"; 
-
-import "@root/index.scss";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.">
     <meta name="keywords" content="discord, armcord, arm, linux, wayland">
     <meta name="author" content="ArmCord Team">
     <title>ArmCord</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iamludal/twemoji-awesome@latest/twemoji-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <nav>
-      <a href="/">
-        <img src="/logo.png" alt="ArmCord logo" />
-      </a>
-      <Button name="Download" href="/download" />
-      <Button name="FAQ" href="/faq" />
-      <Button name="Screenshots" href="/screenshots" />
-      <Button name="Github" href="https://github.com/ArmCord/ArmCord" />
-      <Button name="Support" href="https://discord.gg/TnhxcqynZ2"/>
-      <Button name="Donate" href="https://github.com/sponsors/smartfrigde" />
-    </nav>
-    <slot />
-    <p class="legal">Discord is trademark of Discord Inc. ArmCord is not affiliated with or endorsed by Discord Inc.</p>
+  <body class="flex flex-col min-h-screen pt-20">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

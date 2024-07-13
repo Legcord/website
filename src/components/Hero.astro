@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../../public/screenshots/1080p.png';
+---
+
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 py-24">
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+    <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+      <h1 class="text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+        Enhance Your Discord Experience
+      </h1>
+      <p class="text-xl lg:text-2xl mb-8 text-white opacity-90 max-w-lg">
+        ArmCord is a lightweight, customizable Discord client that puts you in control.
+      </p>
+      <a 
+        href="/download" 
+        class="bg-white text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:scale-105 transition duration-300 shadow-lg inline-block"
+      >
+        Download Now
+      </a>
+    </div>
+    <div class="lg:w-1/2">
+      <Image 
+        src={heroImage} 
+        alt="ArmCord Screenshot" 
+        class="rounded-lg shadow-2xl transform hover:scale-105 transition duration-300 w-full max-w-2xl mx-auto"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../public/logo.png';
+import discordIcon from '../../public/nav-icons/discord.svg';
+import githubIcon from '../../public/nav-icons/github.svg';
+---
+
+<header class="fixed top-0 left-0 right-0 bg-gray-800 shadow-lg py-4 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="flex items-center">
+        <Image src={logo} alt="ArmCord Logo" class="h-12 w-auto" />
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 items-center">
+          <li><a href="/download" class="text-lg hover:text-blue-400 transition duration-300">Download</a></li>
+          <li><a href="/faq" class="text-lg hover:text-blue-400 transition duration-300">FAQ</a></li>
+          <li><a href="https://github.com/sponsors/smartfrigde" class="text-lg hover:text-blue-400 transition duration-300">Donate</a></li>
+          <li>
+            <a href="https://discord.gg/TnhxcqynZ2" class="hover:text-blue-400 transition duration-300">
+              <Image src={discordIcon} alt="Discord" class="h-6 w-6 hover:opacity-80 transition duration-300" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ArmCord/ArmCord" class="hover:text-blue-400 transition duration-300">
+              <Image src={githubIcon} alt="GitHub" class="h-6 w-6 hover:opacity-80 transition duration-300" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="md:hidden hidden" id="mobile-menu">
+    <ul class="px-4 pt-2 pb-3 space-y-1">
+      <li><a href="/download" class="block text-lg hover:text-blue-400 transition duration-300">Download</a></li>
+      <li><a href="/faq" class="block text-lg hover:text-blue-400 transition duration-300">FAQ</a></li>
+      <li><a href="https://github.com/sponsors/smartfrigde" class="block text-lg hover:text-blue-400 transition duration-300">Donate</a></li>
+      <li>
+        <a href="https://discord.gg/TnhxcqynZ2" class="block hover:text-blue-400 transition duration-300">
+          <Image src={discordIcon} alt="Discord" class="h-6 w-6 inline-block mr-2 hover:opacity-80 transition duration-300" /> Discord
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ArmCord/ArmCord" class="block hover:text-blue-400 transition duration-300">
+          <Image src={githubIcon} alt="GitHub" class="h-6 w-6 inline-block mr-2 hover:opacity-80 transition duration-300" /> GitHub
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
