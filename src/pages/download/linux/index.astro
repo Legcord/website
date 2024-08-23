@@ -15,19 +15,20 @@ import Button from "@components/Button.astro";
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Button name="Flatpak" href="https://flathub.org/apps/details/xyz.armcord.ArmCord" description="Universal Linux package" />
             <Button name="AUR" href="https://aur.archlinux.org/packages/armcord-bin" description="Arch User Repository" />
+            <Button name="Debian/Ubuntu" href="https://github.com/ArmCord/ArmCord?tab=readme-ov-file#debian-ubuntu-and-raspbian-repository" description="Official APT repository" />
+            <Button name="Snap" href="https://snapcraft.io/armcord" description="Containerised snap" />
           </div>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-white mb-4 text-center">Direct Downloads</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Button name="AppImage" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/ArmCord-VERSIONNUM.AppImage`} description="Portable Linux application" />
-            <Button name="Debian/Ubuntu" href={`https://github.com/ArmCord/ArmCord/releases/download/vVERSIONNUM/armcord_VERSIONNUM_amd64.deb`} description=".deb package for Debian-based distributions" />
+            <Button name="Github Releases" href={`https://github.com/ArmCord/ArmCord/releases/tag/vVERSIONNUM`} description="RPM/AppImage/debs/tarballs and more." />
           </div>
         </div>
       </div>
       <div class="mt-8 text-center">
         <p class="text-gray-300">
-          For other Linux distributions, other architectures and package managers, please visit our <a href="https://github.com/ArmCord/ArmCord" class="text-blue-400 hover:underline">GitHub repository</a>.
+          For other package managers, please visit our <a href="https://github.com/ArmCord/ArmCord" class="text-blue-400 hover:underline">GitHub repository</a>.
         </p>
       </div>
     </div>
