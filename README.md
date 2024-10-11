@@ -1,1 +1,1 @@
-# ArmCord Website
+# Legcord Website

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "ArmCord Mod Loader",
-  "description": "Loads Mods into ArmCord. Managed by the client",
+  "name": "Legcord Mod Loader",
+  "description": "Loads Mods into Legcord. Managed by the client",
   "version": "1.0.0",
   "author": "Vendicated",
   "homepage_url": "https://github.com/Vendicated/Vencord",
