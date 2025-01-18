@@ -10,6 +10,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# astro cache directory
+.astro/
 
 # environment variables
 .env
