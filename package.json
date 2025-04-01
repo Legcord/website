@@ -1,5 +1,5 @@
 {
-  "name": "legcord-site",
+  "name": "feetcord-site",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
