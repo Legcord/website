@@ -1,9 +1,10 @@
 ---
 const { title, description, emoji, image } = Astro.props;
 import { Image } from 'astro:assets';
+import Icon from '@components/Icon.astro';
 ---
 
-<div class={`rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 group relative overflow-visible ${image ? 'bg-gray-700' : 'bg-gray-800'}`}>
+<div class={`group relative rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_14px_45px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7 ${image ? 'overflow-visible' : 'overflow-hidden'}`}>
   {image ? (
     <div class="relative mb-4 overflow-visible">
       <Image 
@@ -11,59 +12,22 @@ import { Image } from 'astro:assets';
         alt={title} 
         width={400} 
         height={300} 
-        class="w-full object-cover rounded-lg transition duration-300 transform group-hover:scale-110 group-hover:-translate-y-4 group-hover:shadow-xl z-10 relative cursor-pointer"
+        class="relative z-10 w-full cursor-pointer rounded-xl border border-white/10 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_18px_55px_rgba(0,0,0,0.55)]"
         data-modal-target={`modal-${title.toLowerCase().replace(/\s+/g, '-')}`}
       />
     </div>
   ) : (
-    <div class="text-4xl mb-4">
-      <i class={`twa twa-${emoji}`}></i>
+    <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl shadow-[0_10px_25px_rgba(0,0,0,0.35)]">
+      <Icon name={emoji} class="h-6 w-6 text-white/90" />
     </div>
   )}
-  <div class="flex items-center mb-2">
+  <div class="mb-2 flex items-center gap-2">
     {image && (
-      <div class="text-2xl mr-2">
-        <i class={`twa twa-${emoji}`}></i>
+      <div class="text-2xl">
+        <Icon name={emoji} class="h-6 w-6 text-white/80" />
       </div>
     )}
-    <h3 class="text-xl font-semibold text-white">{title}</h3>
+    <h3 class="text-xl font-semibold text-white tracking-tight">{title}</h3>
   </div>
-  <p class="text-gray-300">{description}</p>
+  <p class="text-white/75 leading-relaxed">{description}</p>
 </div>
-{image && (
-  <div id={`modal-${title.toLowerCase().replace(/\s+/g, '-')}`} class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
-    <div class="relative bg-gray-800 p-4 rounded-lg max-w-3xl max-h-[90vh] overflow-auto">
-      <button class="absolute top-0 right-0 text-white text-3xl font-bold hover:text-gray-300 transition duration-300 w-10 h-10 flex items-center justify-center bg-black bg-opacity-50" aria-label="Close modal">
-        &times;
-      </button>
-      <Image 
-        src={image} 
-        alt={title} 
-        width={800} 
-        height={600} 
-        class="w-full h-auto object-contain"
-      />
-    </div>
-  </div>
-)}
-
-<script>
-  document.querySelectorAll('[data-modal-target]').forEach(img => {
-    img.addEventListener('click', () => {
-      const modalId = img.getAttribute('data-modal-target');
-      const modal = document.getElementById(modalId);
-      if (modal) modal.classList.remove('hidden');
-    });
-  });
-
-  document.querySelectorAll('[id^="modal-"]').forEach(modal => {
-    const closeButton = modal.querySelector('button');
-    closeButton.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.add('hidden');
-    });
-  });
-</script>

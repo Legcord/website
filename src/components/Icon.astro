@@ -1,0 +1,78 @@
+---
+import { icons } from 'lucide';
+import { siApple } from 'simple-icons';
+
+const { name, class: className = "" } = Astro.props;
+
+const nameMap = {
+  "chart-decreasing": "TrendingDown",
+  "shield": "Shield",
+  "gear": "Settings",
+  "rocket": "Rocket",
+  "artist-palette": "Palette",
+  "feather": "Feather",
+  "desktop-computer": "Monitor",
+  "person": "User",
+  "video-game": "Gamepad2",
+  "technologist": "Code",
+  "penguin": "Terminal",
+  "check-mark-button": "BadgeCheck",
+  "red-apple": "Apple",
+  "speaker-high-volume": "Volume2",
+};
+
+const lucideName = nameMap[name] ?? name;
+const icon = icons[lucideName];
+---
+
+{name === 'red-apple' ? (
+  <svg
+    class={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d={siApple.path} />
+  </svg>
+) : icon ? (
+  <svg
+    class={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    {icon.map((node) => {
+      if (!Array.isArray(node) || node.length < 2) return null;
+      const [tag, attrs] = node;
+      if (tag === 'path') return <path {...attrs} />;
+      if (tag === 'circle') return <circle {...attrs} />;
+      if (tag === 'rect') return <rect {...attrs} />;
+      if (tag === 'line') return <line {...attrs} />;
+      if (tag === 'polyline') return <polyline {...attrs} />;
+      if (tag === 'polygon') return <polygon {...attrs} />;
+      if (tag === 'ellipse') return <ellipse {...attrs} />;
+      return null;
+    })}
+  </svg>
+) : (
+  <svg
+    class={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="12" cy="12" r="9" />
+  </svg>
+)
+}

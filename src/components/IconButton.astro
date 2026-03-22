@@ -2,8 +2,10 @@
 const { vectorIcon, name, href, description } = Astro.props;
 ---
 
-<a href={href} class="bg-gray-800 rounded-lg p-6 text-center hover:bg-gray-700 transition duration-300 flex flex-col items-center">
-  <img src={vectorIcon} alt={name} class="w-16 h-16 mb-4 invert" />
-  <h2 class="text-2xl font-semibold text-white mb-2">{name}</h2>
-  <p class="text-gray-300 text-sm">{description}</p>
+<a href={href} class="group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center shadow-[0_14px_45px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7">
+  <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_10px_25px_rgba(0,0,0,0.35)]">
+    <img src={vectorIcon} alt={name} class="h-9 w-9 invert opacity-90 transition group-hover:opacity-100" />
+  </div>
+  <h2 class="text-2xl font-semibold text-white tracking-tight mb-2">{name}</h2>
+  <p class="text-sm text-white/70 leading-relaxed">{description}</p>
 </a>

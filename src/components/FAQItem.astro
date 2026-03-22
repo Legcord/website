@@ -2,31 +2,35 @@
 const { question, answer } = Astro.props;
 ---
 
-<div class="bg-gray-800 rounded-lg overflow-hidden">
-  <button class="w-full text-left p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
-    <div class="flex justify-between items-center">
-      <h3 class="text-lg font-semibold text-white">{question}</h3>
-      <svg class="w-5 h-5 text-white transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<div class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_14px_45px_rgba(0,0,0,0.35)]" data-faq-item>
+  <button class="w-full text-left px-5 py-4 transition hover:bg-white/5" data-faq-button aria-expanded="false">
+    <div class="flex justify-between items-center gap-4">
+      <h3 class="text-lg font-semibold text-white tracking-tight">{question}</h3>
+      <svg class="w-5 h-5 text-white/85 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-faq-chevron>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
       </svg>
     </div>
   </button>
-  <div class="max-h-0 overflow-hidden transition-all duration-300">
-    <p class="p-4 text-gray-300" set:html={answer}></p>
+  <div class="max-h-0 overflow-hidden transition-all duration-300" data-faq-content>
+    <p class="px-5 pb-5 text-white/75 leading-relaxed" set:html={answer}></p>
   </div>
 </div>
 
 <script>
-  const faqItems = document.querySelectorAll('.bg-gray-800');
-  faqItems.forEach(item => {
-    const button = item.querySelector('button');
-    const content = item.querySelector('div[class^="max-h-0"]');
-    const svg = item.querySelector('svg');
+  document.querySelectorAll('[data-faq-item]').forEach((item) => {
+    const button = item.querySelector('[data-faq-button]');
+    const content = item.querySelector('[data-faq-content]');
+    const chevron = item.querySelector('[data-faq-chevron]');
+
+    if (!button || !content || !chevron) return;
 
     button.addEventListener('click', () => {
+      const isOpen = !content.classList.contains('max-h-0');
+
       content.classList.toggle('max-h-0');
       content.classList.toggle('max-h-96');
-      svg.classList.toggle('rotate-180');
+      chevron.classList.toggle('rotate-180');
+      button.setAttribute('aria-expanded', String(!isOpen));
     });
   });
 </script>
