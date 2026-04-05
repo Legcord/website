@@ -11,7 +11,7 @@ const faqItems = [
   { q: "Can I stream screenshare audio with it?", a: "Legcord only supports screensharing audio on Windows and Linux. Linux requires PulseAudio or PipeWire." },
   { q: "Where can I find the source code?", a: "The source code is on GitHub at github.com/Legcord/Legcord." },
   { q: "Where can I translate this?", a: "Translations are done using our Weblate page at hosted.weblate.org/projects/legcord/legcord." },
-  { q: "Does Legcord have a privacy policy?", a: "Yes, you can find it at legcord.app/privacy.txt." },
+  { q: "Does Legcord have a privacy policy?", a: "Yes, you can view it by clicking the privacy policy link below." },
   { q: "How do I update Legcord?", a: "Legcord can check for updates automatically. You can also get the latest build from the download page or GitHub releases." },
   { q: "How do I uninstall Legcord?", a: "Remove it like any other app using your system's uninstaller. Your Discord account and data are unchanged." },
   { q: "What's the difference between Shelter and Vencord?", a: "Both are client mods. Shelter comes pre-installed with Legcord; Vencord is togglable in settings and offers a large plugin ecosystem. Use one at a time." },
@@ -36,86 +36,245 @@ const faqJsonLd = {
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <style>
+      .scrollbar-custom::-webkit-scrollbar {
+        width: 8px;
+      }
+      .scrollbar-custom::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .scrollbar-custom::-webkit-scrollbar-thumb {
+        background-color: #4b5563;
+        border-radius: 4px;
+      }
+      .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+        background-color: #6b7280;
+      }
+      .scrollbar-custom {
+        scrollbar-width: thin;
+        scrollbar-color: #4b5563 transparent;
+      }
+    </style>
   </Fragment>
-  <article class="bg-gray-900 py-16" aria-labelledby="faq-heading">
+  <article class="py-16" aria-labelledby="faq-heading">
     <div class="container mx-auto px-4 max-w-4xl">
       <header class="text-center mb-12">
-        <h1 id="faq-heading" class="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h1>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        <h1 id="faq-heading" class="text-4xl md:text-5xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-300">Frequently Asked Questions</h1>
+        <p class="text-gray-400/80 text-lg max-w-2xl mx-auto leading-relaxed">
           Answers to common questions about the Legcord Discord client: installation, updates, plugins, system requirements, and support.
         </p>
       </header>
-      <div class="space-y-8">
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Do you have a support Discord?</h2>
-          <p class="text-gray-300"><a href="https://discord.gg/TnhxcqynZ2" class="text-blue-400 hover:underline">Join our Discord server</a></p>
+      <div class="space-y-6">
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            Do you have a support Discord?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11"><a href="https://discord.gg/TnhxcqynZ2" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Join our Discord server</a></p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Will I get banned for using this?</h2>
-          <p class="text-gray-300">You are breaking <a href='https://discord.com/terms#software-in-discord%E2%80%99s-services' class='text-blue-400 hover:underline'>Discord ToS</a> by using Legcord, but no one has been banned from using it or any of the client mods included.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            Will I get banned for using this?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">You are breaking <a href='https://discord.com/terms#software-in-discord%E2%80%99s-services' class='text-blue-400 hover:text-blue-300 transition-colors hover:underline'>Discord ToS</a> by using Legcord, but no one has been banned from using it or any of the client mods included.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Can I use this on anything other than AArch64?</h2>
-          <p class="text-gray-300">Yes! Legcord should work normally under Windows, macOS, and Linux as long as it has Electron support.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            Can I use this on anything other than AArch64?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Yes! Legcord should work normally under Windows, macOS, and Linux as long as it has Electron support.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">How can I access the settings?</h2>
-          <p class="text-gray-300">There should be a <strong>Settings</strong> button in your Discord settings with Legcord settings. Alternatively you can open Legcord settings from the tray icon.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            How can I access the settings?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">There should be a <strong class="text-white">Settings</strong> button in your Discord settings with Legcord settings. Alternatively you can open Legcord settings from the tray icon.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">How does this work?</h2>
-          <p class="text-gray-300">We utilize the official Discord web app and package it within Electron. While this approach may seem familiar, our focus is on delivering a truly customized and enhanced experience. Unlike many others, we provide seamless integration for loading themes and mods without the need for installers or injectors. You can easily enable transparency effects and adopt Windows' Fluent Design, offering a modern and sleek interface. Though it's fundamentally a web wrapper, we have implemented numerous optimizations and patches to ensure a smooth and tailored experience for you.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            How does this work?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">We utilize the official Discord web app and package it within Electron. While this approach may seem familiar, our focus is on delivering a truly customized and enhanced experience. Unlike many others, we provide seamless integration for loading themes and mods without the need for installers or injectors. You can easily enable transparency effects and adopt Windows' Fluent Design, offering a modern and sleek interface. Though it's fundamentally a web wrapper, we have implemented numerous optimizations and patches to ensure a smooth and tailored experience for you.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Can Legcord block YouTube ads?</h2>
-          <p class="text-gray-300">Yes, Legcord by default blocks YouTube ads found in embeds and WatchTogether!</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-purple-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm group-hover:bg-purple-500/30 transition-colors">?</span>
+            Can Legcord block YouTube ads?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Yes, Legcord by default blocks YouTube ads found in embeds and WatchTogether!</p>
         </section>
 
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Can I stream screenshare audio with it?</h2>
-          <p class="text-gray-300">Legcord only supports screensharing audio on Windows and <strong>Linux</strong>. Linux requires you to have either PulseAudio installed or PipeWire.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            Can I stream screenshare audio with it?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Legcord only supports screensharing audio on Windows and <strong class="text-white">Linux</strong>. Linux requires you to have either PulseAudio installed or PipeWire.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Where can I find the source code?</h2>
-          <p class="text-gray-300">The source code is on <a href="https://github.com/Legcord/Legcord/" class="text-blue-400 hover:underline">GitHub</a>.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-indigo-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm group-hover:bg-indigo-500/30 transition-colors">?</span>
+            Where can I find the source code?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">The source code is on <a href="https://github.com/Legcord/Legcord/" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub</a>.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Where can I translate this?</h2>
-          <p class="text-gray-300">Translations are done using our <a href="https://hosted.weblate.org/projects/legcord/legcord/" class="text-blue-400 hover:underline">Weblate page</a>.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-purple-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm group-hover:bg-purple-500/30 transition-colors">?</span>
+            Where can I translate this?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Translations are done using our <a href="https://hosted.weblate.org/projects/legcord/legcord/" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Weblate page</a>.</p>
         </section>
         
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Does Legcord have a privacy policy?</h2>
-          <p class="text-gray-300">You can find it <a href="https://legcord.app/privacy.txt" class="text-blue-400 hover:underline">here</a>.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            Does Legcord have a privacy policy?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">You can view it <button id="privacy-btn" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline cursor-pointer bg-transparent border-none p-0">here</button>.</p>
         </section>
 
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">How do I update Legcord?</h2>
-          <p class="text-gray-300">Legcord can check for updates automatically. You'll see a notification when a new version is available—click it to download and install. You can also grab the latest build from the <a href="/download" class="text-blue-400 hover:underline">download page</a> or <a href="https://github.com/Legcord/Legcord/releases" class="text-blue-400 hover:underline">GitHub releases</a>.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-purple-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm group-hover:bg-purple-500/30 transition-colors">?</span>
+            How do I update Legcord?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Legcord can check for updates automatically. You'll see a notification when a new version is available—click it to download and install. You can also grab the latest build from the <a href="/download" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">download page</a> or <a href="https://github.com/Legcord/Legcord/releases" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub releases</a>.</p>
         </section>
 
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">How do I uninstall Legcord?</h2>
-          <p class="text-gray-300">Remove it like any other app: use your system's uninstaller (e.g. Settings → Apps on Windows, or drag to Trash on macOS). Your Discord account and data are unchanged—they're tied to your account, not the client.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-sm group-hover:bg-blue-500/30 transition-colors">?</span>
+            How do I uninstall Legcord?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Remove it like any other app: use your system's uninstaller (e.g. Settings → Apps on Windows, or drag to Trash on macOS). Your Discord account and data are unchanged—they're tied to your account, not the client.</p>
         </section>
 
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">What's the difference between Shelter and Vencord?</h2>
-          <p class="text-gray-300">Both are client mods (plugins) you can use with Legcord. <strong>Shelter</strong> comes pre-installed with Legcord and is lightweight. <strong>Vencord</strong> is togglable in Legcord settings and offers a large plugin ecosystem. You can enable one or the other (or neither) in Legcord settings. See the <a href="/plugins" class="text-blue-400 hover:underline">Plugins page</a> for links.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-indigo-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm group-hover:bg-indigo-500/30 transition-colors">?</span>
+            What's the difference between Shelter and Vencord?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Both are client mods (plugins) you can use with Legcord. <strong class="text-white">Shelter</strong> comes pre-installed with Legcord and is lightweight. <strong class="text-white">Vencord</strong> is togglable in Legcord settings and offers a large plugin ecosystem. You can enable one or the other (or neither) in Legcord settings. See the <a href="/plugins" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Plugins page</a> for links.</p>
         </section>
 
-        <section class="bg-gray-800 rounded-lg p-6">
-          <h2 class="text-2xl font-semibold text-white mb-4">Does Legcord work on Steam Deck / Raspberry Pi?</h2>
-          <p class="text-gray-300">Legcord supports Linux on x64 and AArch64. On <strong>Steam Deck</strong> (Arch-based), you can install the Linux build if Electron is supported. On <strong>Raspberry Pi</strong> and other ARM devices, the AArch64 Linux build should work on compatible distros.</p>
+        <section class="rounded-xl p-6 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-purple-500/20 hover:bg-white/[0.06] transition-all duration-300 group">
+          <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm group-hover:bg-purple-500/30 transition-colors">?</span>
+            Does Legcord work on Steam Deck / Raspberry Pi?
+          </h2>
+          <p class="text-gray-300/80 leading-relaxed pl-11">Legcord supports Linux on x64 and AArch64. On <strong class="text-white">Steam Deck</strong> (Arch-based), you can install the Linux build if Electron is supported. On <strong class="text-white">Raspberry Pi</strong> and other ARM devices, the AArch64 Linux build should work on compatible distros.</p>
         </section>
       </div>
     </div>
-    </article>
+  </article>
+
+  <div id="privacy-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+    <div class="rounded-xl max-w-3xl w-full max-h-[80vh] overflow-hidden shadow-2xl border border-white/[0.12] bg-[#0b1020]/95 backdrop-blur-xl">
+      <div class="flex items-center justify-between p-6 border-b border-white/[0.08]">
+        <h2 class="text-2xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-300">Privacy Policy</h2>
+        <button id="close-privacy" class="text-gray-400 hover:text-white transition-colors text-2xl leading-none w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10">&times;</button>
+      </div>
+      <div class="p-6 overflow-y-auto max-h-[60vh] text-gray-300/90 space-y-4 leading-relaxed scrollbar-custom">
+        <p class="text-sm text-blue-400/80 font-medium">Effective Date: 25.05.2023</p>
+        
+        <p class="text-gray-300/80">Thank you for choosing Legcord, a Discord client that prioritizes privacy and security. This Privacy Policy explains how Legcord handles your personal information and your interactions with Discord and Cloudflare.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs">1</span>
+          Collection of Personal Information
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord itself does not collect any personal information from its users. We do not store, transmit, or process any user data directly on our servers.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">2</span>
+          Discord
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord relies on the Discord API and services to function. When you use Legcord, Discord may collect and process your personal information as described in Discord's Privacy Policy. We encourage you to review Discord's Privacy Policy to understand how they collect, use, and disclose your personal information.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs">3</span>
+          Cloudflare
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord also utilizes Cloudflare's services to enhance security and provide a reliable user experience. Cloudflare may collect and process your personal information according to its own Privacy Policy.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs">4</span>
+          User Consent
+        </h3>
+        <p class="text-gray-300/80 pl-8">By using Legcord, you acknowledge and consent to Discord and Cloudflare collecting and processing your personal information as described in their respective privacy policies.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">5</span>
+          Security Measures
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord is committed to safeguarding your personal information. We take appropriate technical and organizational measures to protect your data against unauthorized access, disclosure, alteration, or destruction.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs">6</span>
+          Third-Party Services
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord may contain links to third-party services or websites that are not operated or controlled by us. This Privacy Policy does not apply to any third-party services or websites.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs">7</span>
+          Children's Privacy
+        </h3>
+        <p class="text-gray-300/80 pl-8">Legcord is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h3 class="text-lg font-semibold text-white mt-4 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-md bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">8</span>
+          Contact Us
+        </h3>
+        <p class="text-gray-300/80 pl-8">If you have any questions, please contact us at <a href="mailto:support@legcord.app" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">support@legcord.app</a></p>
+      </div>
+      <div class="p-4 border-t border-white/[0.08] bg-white/[0.02] flex justify-end">
+        <button id="close-privacy-bottom" class="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const privacyModal = document.getElementById('privacy-modal');
+    const privacyBtn = document.getElementById('privacy-btn');
+    const closePrivacy = document.getElementById('close-privacy');
+    const closePrivacyBottom = document.getElementById('close-privacy-bottom');
+
+    function openModal() {
+      privacyModal.classList.remove('hidden');
+      privacyModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      privacyModal.classList.add('hidden');
+      privacyModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    privacyBtn?.addEventListener('click', openModal);
+    closePrivacy?.addEventListener('click', closeModal);
+    closePrivacyBottom?.addEventListener('click', closeModal);
+
+    privacyModal?.addEventListener('click', (e) => {
+      if (e.target === privacyModal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !privacyModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  </script>
 </BaseLayout>
