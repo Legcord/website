@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://legcord.app/sitemap.xml
+Sitemap: https://legcord.app/sitemap-index.xml
