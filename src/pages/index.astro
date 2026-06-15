@@ -34,6 +34,7 @@ const jsonLd = {
 <BaseLayout
   title="Legcord – Lightweight Discord Client"
   description="Legcord is a lightweight, open-source Discord client for Windows, Mac, and Linux. Custom themes, built-in mods, privacy-first. Download for free."
+  canonical="/"
   image="/logo.png"
 >
   <Fragment slot="head">
@@ -49,10 +50,10 @@ const jsonLd = {
       </h2>
       <div class="rounded-2xl p-8 border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm">
         <p class="text-gray-300/90 text-lg leading-relaxed mb-4">
-          <strong class="text-white">Legcord</strong> is a free, open-source alternative Discord client that works on <strong class="text-white">Windows</strong>, <strong class="text-white">macOS</strong>, and <strong class="text-white">Linux</strong>. It uses the official Discord web app inside an optimized Electron shell, so you get the same servers, messages, and features—with less RAM usage, built-in themes and mods, and stronger privacy. No injectors or separate mod installers are required: download Legcord, log in with your Discord account, and enable the options you want in settings.
+          <strong class="text-white">Legcord</strong> is a free, open-source alternative Discord client that works on <strong class="text-white">Windows</strong>, <strong class="text-white">macOS</strong>, and <strong class="text-white">Linux</strong>. It uses the official Discord web app inside an optimized Electron wrapper, so you get the same servers, messages, and features—with less resources usage, built-in themes and mods, and stronger privacy. No injectors or separate mod installers are required: download Legcord, log in with your Discord account, and enable the options you want in settings.
         </p>
         <p class="text-gray-400/80 leading-relaxed">
-          Whether you're on x64 or <strong class="text-gray-300">ARM64 / AArch64</strong> (including many Linux devices and ARM Windows machines), Legcord aims to give you a lightweight Discord experience with support for <strong class="text-gray-300">Wayland</strong> and X11 on Linux, native-feeling screensharing on Mac, and optional client mods like Shelter and Vencord for themes and plugins.
+          Whether you're on x64 or <strong class="text-gray-300">AArch64</strong> (including many Linux devices and ARM Windows machines), Legcord aims to give you a lightweight Discord experience with support for <strong class="text-gray-300">Wayland</strong> and X11 on Linux, native-feeling screensharing on Mac, and optional client mods like Equicord and Vencord for themes and plugins.
         </p>
       </div>
     </div>
@@ -69,8 +70,8 @@ const jsonLd = {
           <span class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors">
             <Icon name="chart-decreasing" class="h-7 w-7 text-blue-400" />
           </span>
-          <h3 class="text-lg font-semibold text-white mb-2">Lightweight</h3>
-          <p class="text-gray-400/80 text-sm leading-relaxed">Uses less RAM than the official client. Perfect for gaming and older hardware.</p>
+          <h3 class="text-lg font-semibold text-white mb-2">Smoother</h3>
+          <p class="text-gray-400/80 text-sm leading-relaxed">Uses less resources than the official client. Perfect for gaming and older hardware.</p>
         </div>
         <div class="rounded-xl p-6 text-center border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm hover:border-purple-500/30 hover:bg-white/[0.06] transition-all duration-300 group">
           <span class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/20 group-hover:bg-purple-500/30 transition-colors">
@@ -138,7 +139,7 @@ const jsonLd = {
         />
         <FeatureCard 
           title="Gamers"
-          description="Are you tired of Discord app taking your precious ram in the background? Try out Legcord, it's much lighter and detects your games like a charm!"
+          description="Are you tired of Discord app taking your precious resources in the background? Try out Legcord, it's much lighter and detects your games like a charm!"
           emoji="video-game"
         />
         <FeatureCard 
@@ -254,7 +255,7 @@ const jsonLd = {
               <td class="py-3 px-4 text-blue-400 font-medium">Yes</td>
             </tr>
             <tr>
-              <td class="py-3 px-4">Linux / Wayland / ARM64</td>
+              <td class="py-3 px-4">Linux / Wayland / AArch64</td>
               <td class="py-3 px-4">Varies</td>
               <td class="py-3 px-4 text-blue-400 font-medium">First-class</td>
             </tr>
@@ -272,7 +273,7 @@ const jsonLd = {
         <ul class="space-y-3 text-gray-300/80 text-sm">
           <li class="flex items-start gap-3">
             <span class="text-blue-400 mt-0.5">•</span>
-            <span><strong class="text-white">Windows:</strong> Windows 10 or later (64-bit). ARM64 supported.</span>
+            <span><strong class="text-white">Windows:</strong> Windows 10 or later (64-bit). AArch64 supported.</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-purple-400 mt-0.5">•</span>
