@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
+import latest from "../../../../public/latest.json";
+const version = latest.version;
 ---
 
 <BaseLayout
@@ -8,14 +10,13 @@ import Button from "@components/Button.astro";
   description="Download Legcord for Windows 10/11. Lightweight Discord client for x64 and AArch64. Themes, mods, privacy."
   canonical="/download/windows"
 >
-  <script is:inline src="/getLatest.js"></script>
   <div class="py-16">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-bold text-center text-white mb-8">Download Legcord for Windows 10/11</h1>
       <h2 class="text-2xl font-semibold text-white mb-6 text-center">Select your system architecture:</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Button name="64-bit (x64)" href={`https://github.com/Legcord/Legcord/releases/download/vVERSIONNUM/Legcord-VERSIONNUM-win-x64.exe`} description="For most modern computers" />
-        <Button name="ARM64" href={`https://github.com/Legcord/Legcord/releases/download/vVERSIONNUM/Legcord-VERSIONNUM-win-arm64.exe`} description="For ARM-based devices" />
+        <Button name="64-bit (x64)" href={`https://github.com/Legcord/Legcord/releases/download/v${version}/Legcord-${version}-win-x64.exe`} target="_blank" rel="noopener noreferrer" description="For most modern computers" />
+        <Button name="ARM64" href={`https://github.com/Legcord/Legcord/releases/download/v${version}/Legcord-${version}-win-arm64.exe`} target="_blank" rel="noopener noreferrer" description="For ARM-based devices" />
       </div>
       <div class="mt-8 text-center">
         <p class="text-gray-300">

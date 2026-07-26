@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
+import latest from "../../../../public/latest.json";
+const version = latest.version;
 ---
 
 <BaseLayout
@@ -8,7 +10,6 @@ import Button from "@components/Button.astro";
   description="Download Legcord for Linux. AppImage, .deb, Flatpak. Lightweight Discord client for x64 and AArch64, Wayland and X11."
   canonical="/download/linux"
 >
-  <script is:inline src="/getLatest.js"></script>
   <div class="py-16">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-bold text-center text-white mb-8">Download Legcord for Linux</h1>
@@ -17,22 +18,22 @@ import Button from "@components/Button.astro";
         <div>
           <h3 class="text-xl font-semibold text-white mb-4 text-center">Package Managers</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Button name="Flatpak" href="https://github.com/Legcord/Legcord?tab=readme-ov-file#flatpak" description="Universal Linux package" />
-            <Button name="AUR" href="https://aur.archlinux.org/packages/legcord-bin" description="Arch User Repository" />
-            <Button name="Debian/Ubuntu" href="https://github.com/Legcord/Legcord?tab=readme-ov-file#debian-ubuntu-and-raspbian-repository" description="Official APT repository" />
-            <Button name="Snap" href="https://snapcraft.io/legcord" description="Containerised snap" />
+            <Button name="Flatpak" href="https://github.com/Legcord/Legcord?tab=readme-ov-file#flatpak" target="_blank" rel="noopener noreferrer" description="Universal Linux package" />
+            <Button name="AUR" href="https://aur.archlinux.org/packages/legcord-bin" target="_blank" rel="noopener noreferrer" description="Arch User Repository" />
+            <Button name="Debian/Ubuntu" href="https://github.com/Legcord/Legcord?tab=readme-ov-file#debian-ubuntu-and-raspbian-repository" target="_blank" rel="noopener noreferrer" description="Official APT repository" />
+            <Button name="Snap" href="https://snapcraft.io/legcord" target="_blank" rel="noopener noreferrer" description="Containerised snap" />
           </div>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-white mb-4 text-center">Direct Downloads</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Button name="Github Releases" href={`https://github.com/Legcord/Legcord/releases/tag/vVERSIONNUM`} description="RPM/AppImage/debs/tarballs and more." />
+            <Button name="Github Releases" href={`https://github.com/Legcord/Legcord/releases/tag/v${version}`} target="_blank" rel="noopener noreferrer" description="RPM/AppImage/debs/tarballs and more." />
           </div>
         </div>
       </div>
       <div class="mt-8 text-center">
         <p class="text-gray-300">
-          For other package managers, please visit our <a href="https://github.com/Legcord/Legcord" class="text-blue-400 hover:underline">GitHub repository</a>.
+          For other package managers, please visit our <a href="https://github.com/Legcord/Legcord" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">GitHub repository</a>.
         </p>
       </div>
     </div>

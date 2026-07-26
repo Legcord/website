@@ -14,7 +14,7 @@ export const FAQ_ENTRIES: FaqEntry[] = [
     question: "Do you have a support Discord?",
     answerText: "Join our Discord server",
     answerHtml:
-      '<a href="https://discord.gg/TnhxcqynZ2" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Join our Discord server</a>',
+      '<a href="https://discord.gg/TnhxcqynZ2" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Join our Discord server</a>',
     accent: "blue",
   },
   {
@@ -22,7 +22,7 @@ export const FAQ_ENTRIES: FaqEntry[] = [
     answerText:
       "You are breaking Discord ToS by using Legcord, but no one has been banned from using it or any of the client mods included.",
     answerHtml:
-      "You are breaking <a href='https://discord.com/terms#software-in-discord%E2%80%99s-services' class='text-blue-400 hover:text-blue-300 transition-colors hover:underline'>Discord ToS</a> by using Legcord, but no one has been banned from using it or any of the client mods included.",
+      "You are breaking <a href='https://discord.com/terms#software-in-discord%E2%80%99s-services' target='_blank' rel='noopener noreferrer' class='text-blue-400 hover:text-blue-300 transition-colors hover:underline'>Discord ToS</a> by using Legcord, but no one has been banned from using it or any of the client mods included.",
     accent: "blue",
   },
   {
@@ -75,14 +75,14 @@ export const FAQ_ENTRIES: FaqEntry[] = [
     question: "Where can I find the source code?",
     answerText: "The source code is on GitHub.",
     answerHtml:
-      'The source code is on <a href="https://github.com/Legcord/Legcord/" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub</a>.',
+      'The source code is on <a href="https://github.com/Legcord/Legcord/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub</a>.',
     accent: "indigo",
   },
   {
     question: "Where can I translate this?",
     answerText: "Translations are done using our Weblate page.",
     answerHtml:
-      'Translations are done using our <a href="https://hosted.weblate.org/projects/legcord/legcord/" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Weblate page</a>.',
+      'Translations are done using our <a href="https://hosted.weblate.org/projects/legcord/legcord/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">Weblate page</a>.',
     accent: "purple",
   },
   {
@@ -97,7 +97,7 @@ export const FAQ_ENTRIES: FaqEntry[] = [
     answerText:
       "Legcord can check for updates automatically. You'll see a notification when a new version is available—click it to download and install. You can also grab the latest build from the download page or GitHub releases.",
     answerHtml:
-      'Legcord can check for updates automatically. You\'ll see a notification when a new version is available—click it to download and install. You can also grab the latest build from the <a href="/download" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">download page</a> or <a href="https://github.com/Legcord/Legcord/releases" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub releases</a>.',
+      'Legcord can check for updates automatically. You\'ll see a notification when a new version is available—click it to download and install. You can also grab the latest build from the <a href="/download" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">download page</a> or <a href="https://github.com/Legcord/Legcord/releases" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors hover:underline">GitHub releases</a>.',
     accent: "purple",
   },
   {
