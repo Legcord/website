@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Button from "@components/Button.astro";
+import latest from "../../../../public/latest.json";
+const version = latest.version;
 ---
 
 <BaseLayout
@@ -8,7 +10,6 @@ import Button from "@components/Button.astro";
   description="Download Legcord for Mac. Universal binary for Apple Silicon and Intel. Lightweight Discord client with themes and mods."
   canonical="/download/mac"
 >
-  <script is:inline src="/getLatest.js"></script>
   <div class="py-16">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-bold text-center text-white mb-12">Download Legcord for macOS</h1>
@@ -17,17 +18,17 @@ import Button from "@components/Button.astro";
         <div>
           <h3 class="text-xl font-semibold text-white mb-4 text-center">Universal binary</h3>
           <div class="space-y-4">
-            <Button name="DMG" href={`https://github.com/Legcord/Legcord/releases/download/vVERSIONNUM/Legcord-VERSIONNUM-mac-universal.dmg`} description="Disk image for easy installation" />
-            <Button name="ZIP" href={`https://github.com/Legcord/Legcord/releases/download/vVERSIONNUM/Legcord-VERSIONNUM-mac-universal.zip`} description="Compressed archive" />
+            <Button name="DMG" href={`https://github.com/Legcord/Legcord/releases/download/v${version}/Legcord-${version}-mac-universal.dmg`} target="_blank" rel="noopener noreferrer" description="Disk image for easy installation" />
+            <Button name="ZIP" href={`https://github.com/Legcord/Legcord/releases/download/v${version}/Legcord-${version}-mac-universal.zip`} target="_blank" rel="noopener noreferrer" description="Compressed archive" />
           </div>
         </div>
         <div class="mt-8">
           <h3 class="text-xl font-semibold text-white mb-4 text-center">Package Manager</h3>
-          <Button name="Homebrew" href={`https://github.com/Legcord/Legcord?tab=readme-ov-file#homebrew-repository`} description="Install using Homebrew package manager" />
+          <Button name="Homebrew" href={`https://github.com/Legcord/Legcord?tab=readme-ov-file#homebrew-repository`} target="_blank" rel="noopener noreferrer" description="Install using Homebrew package manager" />
         </div>
         <div class="mt-8 text-center">
           <p class="text-gray-300">
-            <a href="https://github.com/Legcord/Legcord/issues/560#issuecomment-2073419170" class="text-blue-400 hover:underline">If macOS tells you the app is damaged, try this.</a>
+            <a href="https://github.com/Legcord/Legcord/issues/560#issuecomment-2073419170" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">If macOS tells you the app is damaged, try this.</a>
           </p>
         </div>
       </div>

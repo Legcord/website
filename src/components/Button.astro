@@ -1,8 +1,8 @@
 ---
-const { name, href, description } = Astro.props;
+const { name, href, description, target, rel } = Astro.props;
 ---
 
-<a href={href} class="group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-[0_14px_45px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7">
+<a href={href} target={target} rel={rel} class="group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-[0_14px_45px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7">
   <div>
     <h3 class="text-xl font-semibold text-white tracking-tight">{name}</h3>
     <p class="mt-2 text-sm text-white/70 leading-relaxed">{description}</p>

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import IconButton from "@components/IconButton.astro";
+import latest from "../../../public/latest.json";
+const version = latest.version;
 ---
 
 <BaseLayout
@@ -8,7 +10,6 @@ import IconButton from "@components/IconButton.astro";
   description="Download Legcord for Windows, macOS, or Linux. Lightweight Discord client with themes, mods, and privacy. Free and open source."
   canonical="/download"
 >
-  <script is:inline src="/getLatest.js"></script>
   <article class="py-16" aria-labelledby="download-heading">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <header class="text-center mb-12">
@@ -16,10 +17,10 @@ import IconButton from "@components/IconButton.astro";
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-300">Download Legcord</span>
         </h1>
         <p class="text-gray-400 mb-2 max-w-xl mx-auto">
-          Pick your platform below. For release notes and older builds, see <a href="https://github.com/Legcord/Legcord/releases" class="text-blue-400 hover:underline">GitHub releases</a>.
+          Pick your platform below. For release notes and older builds, see <a href="https://github.com/Legcord/Legcord/releases" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">GitHub releases</a>.
         </p>
         <p class="text-gray-500 text-sm">
-          Latest version: <span id="latest-version">VERSIONNUM</span>
+          Latest version: <span id="latest-version">{version}</span>
         </p>
       </header>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
